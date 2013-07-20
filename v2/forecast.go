@@ -82,9 +82,9 @@ func Get(key string, lat string, long string, time string) *Forecast {
 
 	var url string
 	if time == "now" {
-		url = BASEURL + "/" + key + "/" + coord + "?units=ca"
+		url = BASEURL + "/" + key + "/" + coord + "?units=us"
 	} else {
-		url = BASEURL + "/" + key + "/" + coord + "," + time + "?units=ca"
+		url = BASEURL + "/" + key + "/" + coord + "," + time + "?units=us"
 	}
 
 	tr := &http.Transport{
